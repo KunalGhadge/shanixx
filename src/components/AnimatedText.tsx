@@ -10,8 +10,8 @@ const Character = ({ char, progress, range }: { char: string; progress: MotionVa
   const opacity = useTransform(progress, range, [0.2, 1]);
 
   return (
-    <span className="relative inline-block">
-      <span className="opacity-20">{char === " " ? "\u00A0" : char}</span>
+    <span className="relative">
+      <span className="opacity-10">{char === " " ? "\u00A0" : char}</span>
       <motion.span
         style={{ opacity }}
         className="absolute left-0 top-0"
@@ -27,24 +27,44 @@ export const AnimatedText = ({ text, className = "" }: AnimatedTextProps) => {
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 0.8", "end 0.2"],
+    offset: ["start 0.9", "end 0.1"],
   });
 
-  const chars = text.split("");
+  const words = text.split(" ");
+  let charIndexCounter = 0;
+  const totalChars = text.length;
 
   return (
-    <p ref={containerRef} className={className} style={{ fontSize: "clamp(1rem, 2vw, 1.35rem)" }}>
-      {chars.map((char, i) => {
-        const start = i / chars.length;
-        const end = (i + 1) / chars.length;
+    <p ref={containerRef} className={className} style={{ fontSize: "clamp(1.1rem, 2.2vw, 1.5rem)" }}>
+      {words.map((word, wordIdx) => {
+        const characters = word.split("");
         
         return (
-          <Character 
-            key={i} 
-            char={char} 
-            progress={scrollYProgress} 
-            range={[start, end]} 
-          />
+          <span key={wordIdx} className="inline-block">
+            {characters.map((char, charIdx) => {
+              const start = charIndexCounter / totalChars;
+              const end = (charIndexCounter + 1) / totalChars;
+              charIndexCounter++;
+              
+              return (
+                <Character 
+                  key={`${wordIdx}-${charIdx}`} 
+                  char={char} 
+                  progress={scrollYProgress} 
+                  range={[start, end]} 
+                />
+              );
+            })}
+            {/* Space after each word */}
+            <Character 
+              key={`space-${wordIdx}`} 
+              char=" " 
+              progress={scrollYProgress} 
+              range={[charIndexCounter / totalChars, (charIndexCounter + 1) / totalChars]} 
+            />
+            {/* Increment counter for the space */}
+            {(() => { charIndexCounter++; return null; })()}
+          </span>
         );
       })}
     </p>

@@ -57,12 +57,12 @@ export const AboutSection = () => {
         <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24 w-full">
           <div className="space-y-12">
             <AnimatedText
-              text="I started as a creator in 2016, diving into horror and Minecraft content before finding my true passion in music production and hacking. Known as India's first Phonk producer, I fused Indian vibes into rare Phonk and aesthetic rap, hitting 1 million views with 'Phonky India'."
-              className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[700px]"
+              text="I started out back in 2016 making horror and funny content on YouTube. Later on, I taught myself game hacking, app modding, and music production. I eventually discovered Phonk and started blending it with aesthetic rap, hitting over 1 million views with 'Phonky India'."
+              className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[800px]"
             />
             <AnimatedText
-              text="After a brief hiatus, I've returned in 2023 to dominate fresh genres like Brazilian Funk, Krushclub, and Hardwave. My unique fusion of styles connects with international listeners, solidifying my place as a pioneer in the Indian electronic scene. The legacy continues."
-              className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[700px]"
+              text="After taking a break, I've returned in 2023 to dominate Brazilian Funk, Krushclub, and the fresh era of internet music. The journey from Minecraft gaming to becoming a pioneer in the Phonk scene has just begun. Stay tuned for what's next."
+              className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[800px]"
             />
           </div>
           

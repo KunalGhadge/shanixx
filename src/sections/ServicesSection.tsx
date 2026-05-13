@@ -8,23 +8,18 @@ const services = [
   },
   {
     number: "02",
-    title: "Beat Making",
-    description: "Custom hip-hop, aesthetic rap, and trap beats tailored for artists and creators looking for an edge.",
+    title: "Game Development",
+    description: "Creating immersive experiences and mechanics, blending logic with creativity in the world of game dev.",
   },
   {
     number: "03",
-    title: "Sound Design",
-    description: "Unique atmospheric textures and hard-hitting samples that define the modern underground and electronic sound.",
+    title: "Ethical Hacking",
+    description: "Expert insights into game hacking, app modding, and cybersecurity, focused on technical depth and security logic.",
   },
   {
     number: "04",
-    title: "Mixing & Mastering",
-    description: "Professional audio processing to ensure your music sounds crisp, powerful, and ready for global streaming platforms.",
-  },
-  {
-    number: "05",
-    title: "Ethical Hacking",
-    description: "Expert insights into game hacking, app modding, and cybersecurity, blending technical skill with creative logic.",
+    title: "Video Editing",
+    description: "Crafting high-impact visual content with a focus on rhythm, pacing, and modern internet aesthetics.",
   },
 ];
 

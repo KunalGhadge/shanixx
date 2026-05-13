@@ -15,7 +15,7 @@ import {
 const socialLinks = [
   { icon: Twitter, label: "Twitter", url: "https://x.com/SHANIXofc" },
   { icon: Instagram, label: "Instagram", url: "https://instagram.com/ishxronraj.exe" },
-  { icon: Youtube, label: "Youtube", url: "https://www.youtube.com/@SHANIXMUSICS" },
+  { icon: Youtube, label: "Youtube", url: "https://www.youtube.com/@SHANIXofc" },
   { icon: Github, label: "GitHub", url: "https://github.com/DevAbhay-555" },
   { icon: Music, label: "SoundCloud", url: "https://soundcloud.com/SHANIXOFC" },
   { icon: Disc, label: "Discord", url: "https://discord.gg/9U8Uu5aQPp" },
@@ -37,7 +37,7 @@ export const FooterSection = () => {
           </FadeIn>
           <FadeIn delay={0.2}>
             <p className="text-[#D7E2EA] opacity-60 uppercase tracking-widest text-sm sm:text-base max-w-md mx-auto">
-              India&apos;s Phonk pioneer returning to define the next era of electronic music. Let&apos;s connect.
+              India&apos;s Phonk pioneer returning to define the next era of internet music. Let&apos;s connect.
             </p>
           </FadeIn>
           <FadeIn delay={0.4}>
@@ -76,7 +76,7 @@ export const FooterSection = () => {
                 SHAN!X
               </span>
               <span className="text-[#D7E2EA] opacity-40 uppercase tracking-widest text-xs sm:text-sm mt-2">
-                Sharonraj Vasave &mdash; Music Producer
+                Sharonraj Vasave
               </span>
             </div>
           </FadeIn>

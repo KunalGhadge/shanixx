@@ -63,7 +63,7 @@ export const HeroSection = () => {
               I&apos;m SHAN!X
             </span>
             <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]" style={{ fontSize: "clamp(0.75rem, 1.4vw, 1.5rem)" }}>
-              India&apos;s First Phonk Producer & Father of Indian Phonk music
+              Father of Indian Phonk music
             </p>
           </div>
         </FadeIn>

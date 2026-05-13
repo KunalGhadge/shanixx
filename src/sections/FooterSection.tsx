@@ -73,7 +73,7 @@ export const FooterSection = () => {
           <FadeIn x={-20} y={0}>
             <div className="flex flex-col">
               <span className="hero-heading font-black uppercase text-4xl sm:text-5xl lg:text-6xl tracking-tighter">
-                SHAN!X
+                SHANIX!
               </span>
               <span className="text-[#D7E2EA] opacity-40 uppercase tracking-widest text-xs sm:text-sm mt-2">
                 Sharonraj Vasave
@@ -82,7 +82,7 @@ export const FooterSection = () => {
           </FadeIn>
 
           <FadeIn x={20} y={0} className="text-[#D7E2EA] opacity-40 uppercase tracking-widest text-xs sm:text-sm text-center md:text-right">
-            <p>&copy; {new Date().getFullYear()} SHAN!X &mdash; OFFICIAL PORTFOLIO</p>
+            <p>&copy; {new Date().getFullYear()} SHANIX! &mdash; OFFICIAL PORTFOLIO</p>
             <p className="mt-1">All rights reserved &mdash; Father of Indian Phonk</p>
           </FadeIn>
         </div>
@@ -91,7 +91,7 @@ export const FooterSection = () => {
       {/* Background Decorative Text */}
       <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 opacity-[0.03] select-none pointer-events-none w-full text-center">
         <h2 className="hero-heading font-black uppercase tracking-tighter leading-none" style={{ fontSize: "25vw" }}>
-          SHAN!X
+          SHANIX!
         </h2>
       </div>
     </footer>

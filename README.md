@@ -1,6 +1,6 @@
-# SHAN!X Official Portfolio
+# SHANIX! Official Portfolio
 
-The official digital identity of **SHAN!X (Sharonraj Vasave)**, India's first Phonk producer and pioneer of aesthetic rap fusion. This high-performance, visually immersive portfolio is designed to showcase SHAN!X's discography, expertise, and journey from a Minecraft creator to a global electronic music artist.
+The official digital identity of **SHANIX! (Sharonraj Vasave)**, India's first Phonk producer and pioneer of aesthetic rap fusion. This high-performance, visually immersive portfolio is designed to showcase SHANIX!'s discography, expertise, and journey from a Minecraft creator to a global electronic music artist.
 
 ## 🚀 Built With
 - **React + TypeScript**

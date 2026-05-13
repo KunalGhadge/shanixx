@@ -30,7 +30,7 @@ export const HeroSection = () => {
         <div className="overflow-hidden w-full">
           <FadeIn delay={0.15} y={40}>
             <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[11vw] sm:text-[12vw] md:text-[13vw] lg:text-[14.5vw] text-center mt-6 sm:mt-4 md:-mt-5">
-              Hi, i&apos;m SHAN!X
+              Hi, i&apos;m SHANIX!
             </h1>
           </FadeIn>
         </div>
@@ -47,7 +47,7 @@ export const HeroSection = () => {
             >
               <img
                 src="/assets/portrait.png"
-                alt="SHAN!X Portrait"
+                alt="SHANIX! Portrait"
                 className="w-full h-auto"
               />
             </Magnet>
@@ -60,7 +60,7 @@ export const HeroSection = () => {
         <FadeIn delay={0.35} y={20}>
           <div className="flex flex-col gap-1">
             <span className="text-[#D7E2EA] font-medium uppercase tracking-widest text-lg sm:text-xl md:text-2xl">
-              I&apos;m SHAN!X
+              I&apos;m SHANIX!
             </span>
             <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]" style={{ fontSize: "clamp(0.75rem, 1.4vw, 1.5rem)" }}>
               Father of Indian Phonk music

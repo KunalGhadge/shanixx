@@ -4,8 +4,6 @@ import { ContactButton } from "../components/ContactButton";
 import { 
   Instagram, 
   Twitter, 
-  Linkedin, 
-  Mail, 
   Youtube, 
   Github, 
   Music, 

@@ -19,14 +19,14 @@ export const HeroSection = () => {
         
         {/* Glow - Static position to save GPU performance */}
         <motion.div
-          animate={{ opacity: [0.2, 0.4, 0.2], scale: [0.9, 1.1, 0.9] }}
+          animate={{ opacity: [0.2, 0.4, 0.2] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#B600A8]/20 to-[#7621B0]/20 blur-[60px] rounded-full z-0 pointer-events-none"
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#B600A8]/20 to-[#7621B0]/20 blur-[60px] rounded-full z-0 pointer-events-none smooth-gpu"
         />
 
         <motion.div 
-          style={{ scale: portraitScale, y: portraitY }}
-          className="pointer-events-auto relative z-10"
+          style={{ scale: portraitScale, y: portraitY, translateZ: 0 }}
+          className="pointer-events-auto relative z-10 smooth-gpu"
         >
           <FadeIn delay={0.6} y={30}>
             <Magnet padding={200} strength={3} className="w-[520px] md:w-[670px] lg:w-[800px]">

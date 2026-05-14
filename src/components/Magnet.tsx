@@ -20,6 +20,7 @@ export const Magnet: React.FC<MagnetProps> = ({
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const rectRef = useRef<DOMRect | null>(null);
 
   const resetPosition = () => {
     setIsHovered(false);
@@ -28,54 +29,57 @@ export const Magnet: React.FC<MagnetProps> = ({
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      if (!ref.current) return;
+      if (!ref.current || !isHovered) return;
 
-      const { left, top, width, height } = ref.current.getBoundingClientRect();
+      // Only calculate rect once when hovered to save performance
+      if (!rectRef.current) {
+        rectRef.current = ref.current.getBoundingClientRect();
+      }
+
+      const { left, top, width, height } = rectRef.current;
       const centerX = left + width / 2;
       const centerY = top + height / 2;
 
       const distanceX = e.clientX - centerX;
       const distanceY = e.clientY - centerY;
 
-      const isWithinPadding = 
-        Math.abs(distanceX) < width / 2 + padding && 
-        Math.abs(distanceY) < height / 2 + padding;
-
-      if (isWithinPadding) {
-        setIsHovered(true);
-        setPosition({
-          x: distanceX / strength,
-          y: distanceY / strength,
-        });
+      if (Math.abs(distanceX) < padding && Math.abs(distanceY) < padding) {
+        setPosition({ x: distanceX / strength, y: distanceY / strength });
       } else {
         resetPosition();
       }
     };
 
-    const handleMouseLeaveWindow = (e: MouseEvent) => {
-      if (!e.relatedTarget) {
-        resetPosition();
-      }
+    const handleScroll = () => {
+      rectRef.current = null; // Invalidate rect on scroll
+      resetPosition();
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseout', handleMouseLeaveWindow);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mouseout', handleMouseLeaveWindow);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [padding, strength]);
+  }, [isHovered, padding, strength]);
 
   return (
     <div
       ref={ref}
-      onMouseLeave={resetPosition}
       className={className}
+      onMouseEnter={() => {
+        setIsHovered(true);
+        if (ref.current) rectRef.current = ref.current.getBoundingClientRect();
+      }}
+      onMouseLeave={() => {
+        resetPosition();
+        rectRef.current = null;
+      }}
       style={{
         transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
         transition: isHovered ? activeTransition : inactiveTransition,
-        willChange: 'transform',
+        willChange: "transform",
       }}
     >
       {children}

@@ -35,8 +35,8 @@ export const HeroSection = () => {
           </FadeIn>
         </div>
 
-        {/* Portrait - Absolutely Centered */}
-        <div className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-none sm:pointer-events-auto">
+        {/* Portrait - Absolutely Centered at bottom */}
+        <div className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0 pointer-events-none sm:pointer-events-auto">
           <FadeIn delay={0.6} y={30}>
             <Magnet
               padding={150}

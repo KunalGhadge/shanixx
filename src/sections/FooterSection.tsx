@@ -6,8 +6,7 @@ import {
   Twitter, 
   Youtube, 
   Github, 
-  Send,
-  ExternalLink
+  Send
 } from "lucide-react";
 
 // Custom Brand Icons using SVGs for authenticity

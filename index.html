@@ -4,25 +4,64 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="SHANIX! (Sharonraj Vasave), also known as shanix - India's First Phonk Producer, Father of Indian Phonk music. Explore the unique fusion of rare Phonk, aesthetic rap, and trap beats." />
-    <meta name="keywords" content="SHANIX!, shanix, Sharonraj Vasave, Phonk Producer, Indian Phonk, Music Producer, Phonky India, Aesthetic Rap, Brazilian Funk, EDM" />
-    <meta name="author" content="SHANIX!" />
-    <title>SHANIX! -- India's First Phonk Producer</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>SHANIX | Official Portfolio of Sharonraj Vasave</title>
+    <meta name="title" content="SHANIX | Official Portfolio of Sharonraj Vasave" />
+    <meta name="description" content="SHANIX is an Indian phonk producer, music artist, creative technologist, and digital creator known for pioneering Indian phonk music and blending phonk, trap, aesthetic rap, hardwave, Brazilian funk, krushclub, and experimental genres." />
+    <meta name="keywords" content="SHANIX, Sharonraj Vasave, Indian Phonk, Music Producer, Phonk Artist, Phonky India, Aesthetic Rap, Brazilian Funk, Krushclub" />
+    <meta name="author" content="SHANIX" />
+    
+    <!-- Canonical Identity -->
+    <link rel="canonical" href="https://shanix.in" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://shanix.in/" />
+    <meta property="og:title" content="SHANIX | Official Portfolio of Sharonraj Vasave" />
+    <meta property="og:description" content="SHANIX is an Indian phonk producer, music artist, creative technologist, and digital creator known for pioneering Indian phonk music and blending phonk, trap, aesthetic rap, hardwave, Brazilian funk, krushclub, and experimental genres." />
+    <meta property="og:image" content="https://shanix.in/assets/portrait.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://shanix.in/" />
+    <meta property="twitter:title" content="SHANIX | Official Portfolio of Sharonraj Vasave" />
+    <meta property="twitter:description" content="SHANIX is an Indian phonk producer, music artist, creative technologist, and digital creator known for pioneering Indian phonk music and blending phonk, trap, aesthetic rap, hardwave, Brazilian funk, krushclub, and experimental genres." />
+    <meta property="twitter:image" content="https://shanix.in/assets/portrait.png" />
+
+    <!-- Structured Data: Person & MusicGroup Hybrid -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "MusicGroup",
-        "name": "SHANIX!",
-        "alternateName": ["Sharonraj Vasave", "shanix"],
-        "description": "India's first Phonk producer and pioneer of aesthetic rap fusion.",
-        "url": "https://beacons.ai/shanix",
-        "sameAs": [
-          "https://open.spotify.com/artist/72E9kEuXfIHx2MpFbLEUlU",
-          "https://soundcloud.com/SHANIXOFC",
-          "https://instagram.com/ishxronraj.exe",
-          "https://x.com/SHANIXofc"
-        ],
-        "genre": ["Phonk", "Aesthetic Rap", "Brazilian Funk", "EDM", "Trap"]
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://shanix.in/#person",
+            "name": "Sharonraj Vasave",
+            "alternateName": "SHANIX",
+            "url": "https://shanix.in",
+            "jobTitle": "Music Producer & Creative Technologist",
+            "sameAs": [
+              "https://open.spotify.com/artist/72E9kEuXfIHx2MpFbLEUlU",
+              "https://soundcloud.com/SHANIXOFC",
+              "https://instagram.com/ishxronraj.exe",
+              "https://x.com/SHANIXofc",
+              "https://www.youtube.com/@SHANIXofc"
+            ]
+          },
+          {
+            "@type": "MusicGroup",
+            "@id": "https://shanix.in/#artist",
+            "name": "SHANIX",
+            "alternateName": ["Sharonraj Vasave", "shanix"],
+            "description": "SHANIX is an Indian phonk producer, music artist, creative technologist, and digital creator known for pioneering Indian phonk music.",
+            "url": "https://shanix.in",
+            "genre": ["Phonk", "Aesthetic Rap", "Brazilian Funk", "Krushclub", "Trap", "Hardwave"],
+            "member": {
+              "@id": "https://shanix.in/#person"
+            }
+          }
+        ]
       }
     </script>
   </head>

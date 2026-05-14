@@ -60,14 +60,17 @@ export const AboutSection = () => {
 
         <div className="flex flex-col items-center gap-16 sm:gap-20 md:gap-24 w-full">
           <div className="space-y-12">
-            <AnimatedText
-              text="I started out back in 2016 making horror and funny content on YouTube. Later on, I taught myself game hacking, app modding, and music production. I eventually discovered Phonk and started blending it with aesthetic rap, hitting over 1 million views with 'Phonky India'."
-              className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[800px]"
-            />
-            <AnimatedText
-              text="After taking a break, I've returned in 2023 to dominate Brazilian Funk, Krushclub, and the fresh era of internet music. The journey from Minecraft gaming to becoming a pioneer in the Phonk scene has just begun. Stay tuned for what's next."
-              className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[800px]"
-            />
+            <div className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[800px] flex flex-col gap-6" style={{ fontSize: "clamp(1.1rem, 2vw, 1.3rem)" }}>
+              <p>
+                <strong>SHANIX</strong>, formerly known as <strong>Sharonraj Vasave</strong>, is an Indian music producer, creative technologist, and digital creator. My journey began in 2016 on YouTube, creating content before diving deep into game development, ethical hacking, and music production.
+              </p>
+              <p>
+                As the pioneer of Indian Phonk music, I am known for blending hardwave, trap, Brazilian funk, krushclub, and aesthetic rap. My breakthrough hit "Phonky India" surpassed 1 million views, establishing a unique identity in the global internet music scene.
+              </p>
+              <p>
+                My artistic philosophy centers on pushing digital boundaries—fusing aggressive basslines with experimental audio-visual aesthetics. Today, the SHANIX brand is a multifaceted entity spanning across Spotify, SoundCloud, YouTube, and the wider creator economy.
+              </p>
+            </div>
           </div>
           
           <FadeIn delay={0.4}>

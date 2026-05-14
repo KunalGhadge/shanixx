@@ -8,8 +8,8 @@ export const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   
-  // Effect 1: Scroll Scaling (Moves from 1 to 1.15 as you scroll)
-  const portraitScale = useTransform(scrollY, [0, 500], [1, 1.15]);
+  // Effect 1: Scroll Scaling (Moves from 1 to 1.4 as you scroll)
+  const portraitScale = useTransform(scrollY, [0, 500], [1, 1.4]);
   const portraitY = useTransform(scrollY, [0, 500], [0, -50]);
 
   return (
@@ -50,15 +50,15 @@ export const HeroSection = () => {
                 {/* Effect 2: Dynamic Glow Pulse */}
                 <motion.div
                   animate={{ 
-                    opacity: [0.2, 0.5, 0.2],
-                    scale: [0.8, 1.1, 0.8]
+                    opacity: [0.3, 0.6, 0.3],
+                    scale: [0.8, 1.2, 0.8]
                   }}
                   transition={{
                     duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute inset-0 bg-accent/20 blur-[40px] sm:blur-[60px] rounded-full z-0"
+                  className="absolute inset-0 bg-gradient-to-tr from-[#B600A8]/30 to-[#7621B0]/30 blur-[60px] sm:blur-[90px] rounded-full z-0"
                 />
 
                 <Magnet

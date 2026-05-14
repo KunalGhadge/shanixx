@@ -36,14 +36,14 @@ export const HeroSection = () => {
         </div>
 
         {/* Portrait - Refined Centering */}
-        <div className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 pointer-events-none sm:pointer-events-auto flex items-center justify-center">
+        <div className="absolute left-1/2 -translate-x-1/2 z-10 top-[58%] sm:top-1/2 -translate-y-1/2 pointer-events-none sm:pointer-events-auto flex items-center justify-center">
           <FadeIn delay={0.6} y={30}>
             <Magnet
               padding={150}
               strength={3}
               activeTransition="transform 0.3s ease-out"
               inactiveTransition="transform 0.6s ease-in-out"
-              className="w-[360px] sm:w-[520px] md:w-[670px] lg:w-[800px]"
+              className="w-[260px] sm:w-[520px] md:w-[670px] lg:w-[800px]"
             >
               <img
                 src="/assets/portrait.png"

@@ -8,12 +8,37 @@ export const HeroSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   
-  // Effects shared across mobile and desktop
   const portraitScale = useTransform(scrollY, [0, 500], [1, 1.4]);
   const portraitY = useTransform(scrollY, [0, 500], [0, -50]);
 
   return (
-    <section ref={containerRef} id="home" className="relative h-screen w-full flex flex-col overflow-x-clip bg-background">
+    <section ref={containerRef} id="home" className="relative h-screen w-full flex flex-col overflow-hidden bg-background">
+      
+      {/* DESKTOP PORTRAIT - GLOBAL CENTER (Absolute Viewport Centering) */}
+      <motion.div 
+        style={{ scale: portraitScale, y: portraitY }}
+        className="hidden sm:flex absolute inset-0 z-10 items-center justify-center pointer-events-none"
+      >
+        <div className="pointer-events-auto">
+          <FadeIn delay={0.6} y={30}>
+            <div className="relative group">
+              <motion.div
+                animate={{ opacity: [0.3, 0.6, 0.3], scale: [0.8, 1.2, 0.8] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute inset-0 bg-gradient-to-tr from-[#B600A8]/30 to-[#7621B0]/30 blur-[90px] rounded-full z-0"
+              />
+              <Magnet padding={200} strength={3} className="w-[520px] md:w-[670px] lg:w-[800px] relative z-10">
+                <img
+                  src="/assets/portrait.png"
+                  alt="SHANIX!"
+                  className="w-full h-auto max-h-[98vh] object-contain drop-shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+                />
+              </Magnet>
+            </div>
+          </FadeIn>
+        </div>
+      </motion.div>
+
       {/* Navbar */}
       <FadeIn delay={0} y={-20} tag="nav" className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8 w-full z-20">
         <div className="flex gap-4 md:gap-8 lg:gap-12 w-full justify-between max-w-7xl mx-auto">
@@ -35,35 +60,10 @@ export const HeroSection = () => {
       </FadeIn>
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-col justify-center items-center relative px-6 md:px-10">
-        
-        {/* DESKTOP PORTRAIT (Overlay) */}
-        <motion.div 
-          style={{ scale: portraitScale, y: portraitY }}
-          className="hidden sm:block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-10 pointer-events-auto"
-        >
-          <FadeIn delay={0.6} y={30}>
-            <div className="relative group">
-              <motion.div
-                animate={{ opacity: [0.3, 0.6, 0.3], scale: [0.8, 1.2, 0.8] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 bg-gradient-to-tr from-[#B600A8]/30 to-[#7621B0]/30 blur-[90px] rounded-full z-0"
-              />
-              <Magnet padding={150} strength={3} className="w-[520px] md:w-[670px] lg:w-[800px] relative z-10">
-                <img
-                  src="/assets/portrait.png"
-                  alt="SHANIX!"
-                  className="w-full h-auto max-h-[98vh] object-contain drop-shadow-[0_0_50px_rgba(0,0,0,0.5)]"
-                />
-              </Magnet>
-            </div>
-          </FadeIn>
-        </motion.div>
-
-        {/* MOBILE STACKED CONTENT */}
-        <div className="relative w-full flex flex-col items-center justify-center sm:block">
+      <div className="flex-1 flex flex-col justify-center items-center relative px-6 md:px-10 z-0">
+        <div className="relative w-full flex flex-col items-center justify-center">
           
-          {/* MOBILE PORTRAIT (Stacked) */}
+          {/* MOBILE PORTRAIT (Stacked - Hidden on PC) */}
           <motion.div 
             style={{ scale: portraitScale, y: portraitY }}
             className="block sm:hidden relative z-10 mb-6 pointer-events-none"
@@ -87,9 +87,9 @@ export const HeroSection = () => {
           </motion.div>
 
           {/* SHARED HEADING */}
-          <div className="relative z-20 sm:z-0 w-full overflow-hidden">
+          <div className="relative z-0 w-full overflow-hidden">
             <FadeIn delay={0.15} y={40}>
-              <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[11vw] sm:text-[12vw] md:text-[13vw] lg:text-[14.5vw] text-center sm:mt-4 md:-mt-5">
+              <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-[11vw] sm:text-[12vw] md:text-[13vw] lg:text-[14.5vw] text-center">
                 Hi, i&apos;m SHANIX!
               </h1>
             </FadeIn>

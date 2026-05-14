@@ -34,25 +34,25 @@ export const HeroSection = () => {
             </h1>
           </FadeIn>
         </div>
+      </div>
 
-        {/* Portrait - Absolutely Centered at bottom */}
-        <div className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0 pointer-events-none sm:pointer-events-auto">
-          <FadeIn delay={0.6} y={30}>
-            <Magnet
-              padding={150}
-              strength={3}
-              activeTransition="transform 0.3s ease-out"
-              inactiveTransition="transform 0.6s ease-in-out"
-              className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px]"
-            >
-              <img
-                src="/assets/portrait.png"
-                alt="SHANIX! Portrait"
-                className="w-full h-auto"
-              />
-            </Magnet>
-          </FadeIn>
-        </div>
+      {/* Portrait - Absolutely Pinned to Bottom of Section */}
+      <div className="absolute left-1/2 -translate-x-1/2 z-10 bottom-0 pointer-events-none sm:pointer-events-auto flex justify-center items-end h-[90vh]">
+        <FadeIn delay={0.6} y={30} className="flex items-end">
+          <Magnet
+            padding={150}
+            strength={3}
+            activeTransition="transform 0.3s ease-out"
+            inactiveTransition="transform 0.6s ease-in-out"
+            className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px]"
+          >
+            <img
+              src="/assets/portrait.png"
+              alt="SHANIX! Portrait"
+              className="w-full h-auto max-h-[85vh] object-contain"
+            />
+          </Magnet>
+        </FadeIn>
       </div>
 
       {/* Bottom Bar */}

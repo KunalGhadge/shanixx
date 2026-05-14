@@ -43,12 +43,12 @@ export const HeroSection = () => {
               strength={3}
               activeTransition="transform 0.3s ease-out"
               inactiveTransition="transform 0.6s ease-in-out"
-              className="w-[320px] sm:w-[450px] md:w-[580px] lg:w-[700px]"
+              className="w-[360px] sm:w-[520px] md:w-[670px] lg:w-[800px]"
             >
               <img
                 src="/assets/portrait.png"
                 alt="SHANIX! Portrait"
-                className="w-full h-auto max-h-[85vh] object-contain drop-shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+                className="w-full h-auto max-h-[98vh] object-contain drop-shadow-[0_0_50px_rgba(0,0,0,0.5)]"
               />
             </Magnet>
           </FadeIn>

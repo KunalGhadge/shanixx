@@ -38,7 +38,7 @@ export const HeroSection = () => {
       <div className="flex-1 flex flex-col justify-center items-center relative px-6 md:px-10">
         
         {/* Mobile: Stacked Layout | PC: Overlay Layout */}
-        <div className="relative w-full flex flex-col items-center justify-center sm:block">
+        <div className="relative w-full flex flex-col items-center justify-center sm:static sm:block">
           
           {/* Portrait with Scroll Scaling & Glow Pulse */}
           <motion.div 

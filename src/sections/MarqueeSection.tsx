@@ -19,8 +19,8 @@ export const MarqueeSection = () => {
     
     return (
       <motion.div 
-        className="flex gap-4 will-change-transform py-2"
-        style={{ x }}
+        className="flex gap-4 py-2 smooth-gpu"
+        style={{ x, translateZ: 0 }}
       >
         {tripledTracks.map((track, idx) => (
           <a
@@ -28,7 +28,7 @@ export const MarqueeSection = () => {
             href={track.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative block w-[300px] sm:w-[420px] h-[200px] sm:h-[270px] rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02] active:scale-95 shrink-0"
+            className="group relative block w-[300px] sm:w-[420px] h-[200px] sm:h-[270px] rounded-2xl overflow-hidden shadow-lg transition-transform hover:scale-[1.02] active:scale-95 shrink-0 smooth-gpu"
           >
             <img
               src={track.cover}
@@ -37,9 +37,9 @@ export const MarqueeSection = () => {
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             {/* Hover Overlay */}
-            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <div className="text-center">
-                <span className="text-white font-medium uppercase tracking-widest text-xs bg-black/60 px-4 py-2 rounded-full border border-white/20 backdrop-blur-md">
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <div className="text-center px-4">
+                <span className="text-white font-medium uppercase tracking-widest text-xs bg-black/80 px-4 py-2 rounded-full border border-white/10">
                   Listen to {track.title}
                 </span>
               </div>

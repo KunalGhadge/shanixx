@@ -58,7 +58,7 @@ export const HeroSection = () => {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}
-                  className="absolute inset-0 bg-accent/20 blur-[60px] sm:blur-[100px] rounded-full z-0"
+                  className="absolute inset-0 bg-accent/20 blur-[40px] sm:blur-[60px] rounded-full z-0"
                 />
 
                 <Magnet

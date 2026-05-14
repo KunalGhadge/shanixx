@@ -14,30 +14,31 @@ export const HeroSection = () => {
   return (
     <section ref={containerRef} id="home" className="relative h-screen w-full flex flex-col overflow-hidden bg-background">
       
-      {/* DESKTOP PORTRAIT - GLOBAL CENTER (Absolute Viewport Centering) */}
-      <motion.div 
-        style={{ scale: portraitScale, y: portraitY }}
-        className="hidden sm:flex absolute inset-0 z-10 items-center justify-center pointer-events-none"
-      >
-        <div className="pointer-events-auto">
+      {/* DESKTOP PORTRAIT LAYER */}
+      <div className="hidden sm:flex absolute inset-0 z-10 items-center justify-center pointer-events-none">
+        
+        {/* Glow - Static position to save GPU performance */}
+        <motion.div
+          animate={{ opacity: [0.2, 0.4, 0.2], scale: [0.9, 1.1, 0.9] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#B600A8]/20 to-[#7621B0]/20 blur-[60px] rounded-full z-0 pointer-events-none"
+        />
+
+        <motion.div 
+          style={{ scale: portraitScale, y: portraitY }}
+          className="pointer-events-auto relative z-10"
+        >
           <FadeIn delay={0.6} y={30}>
-            <div className="relative group">
-              <motion.div
-                animate={{ opacity: [0.3, 0.6, 0.3], scale: [0.8, 1.2, 0.8] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 bg-gradient-to-tr from-[#B600A8]/30 to-[#7621B0]/30 blur-[90px] rounded-full z-0"
+            <Magnet padding={200} strength={3} className="w-[520px] md:w-[670px] lg:w-[800px]">
+              <img
+                src="/assets/portrait.png"
+                alt="SHANIX!"
+                className="w-full h-auto max-h-[98vh] object-contain drop-shadow-[0_0_30px_rgba(0,0,0,0.4)]"
               />
-              <Magnet padding={200} strength={3} className="w-[520px] md:w-[670px] lg:w-[800px] relative z-10">
-                <img
-                  src="/assets/portrait.png"
-                  alt="SHANIX!"
-                  className="w-full h-auto max-h-[98vh] object-contain drop-shadow-[0_0_50px_rgba(0,0,0,0.5)]"
-                />
-              </Magnet>
-            </div>
+            </Magnet>
           </FadeIn>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
 
       {/* Navbar */}
       <FadeIn delay={0} y={-20} tag="nav" className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8 w-full z-20">
@@ -63,23 +64,20 @@ export const HeroSection = () => {
       <div className="flex-1 flex flex-col justify-center items-center relative px-6 md:px-10 z-0">
         <div className="relative w-full flex flex-col items-center justify-center">
           
-          {/* MOBILE PORTRAIT (Stacked - Hidden on PC) */}
+          {/* MOBILE PORTRAIT (Stacked) */}
           <motion.div 
             style={{ scale: portraitScale, y: portraitY }}
             className="block sm:hidden relative z-10 mb-6 pointer-events-none"
           >
             <FadeIn delay={0.6} y={30}>
-              <div className="relative group">
-                <motion.div
-                  animate={{ opacity: [0.3, 0.6, 0.3], scale: [0.8, 1.2, 0.8] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute inset-0 bg-gradient-to-tr from-[#B600A8]/30 to-[#7621B0]/30 blur-[60px] rounded-full z-0"
-                />
+              <div className="relative">
+                {/* Simplified Mobile Glow */}
+                <div className="absolute inset-0 bg-accent/10 blur-[40px] rounded-full z-0" />
                 <Magnet padding={150} strength={3} className="w-[240px] relative z-10">
                   <img
                     src="/assets/portrait.png"
                     alt="SHANIX!"
-                    className="w-full h-auto max-h-[50vh] object-contain drop-shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+                    className="w-full h-auto max-h-[50vh] object-contain drop-shadow-[0_0_20px_rgba(0,0,0,0.3)]"
                   />
                 </Magnet>
               </div>

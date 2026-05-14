@@ -53,7 +53,7 @@ export const Magnet: React.FC<MagnetProps> = ({
     };
 
     const handleMouseLeaveWindow = (e: MouseEvent) => {
-      if (!e.relatedTarget && !e.toElement) {
+      if (!e.relatedTarget) {
         resetPosition();
       }
     };

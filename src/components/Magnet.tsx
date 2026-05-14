@@ -21,6 +21,11 @@ export const Magnet: React.FC<MagnetProps> = ({
   const [isHovered, setIsHovered] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
+  const resetPosition = () => {
+    setIsHovered(false);
+    setPosition({ x: 0, y: 0 });
+  };
+
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!ref.current) return;
@@ -43,18 +48,29 @@ export const Magnet: React.FC<MagnetProps> = ({
           y: distanceY / strength,
         });
       } else {
-        setIsHovered(false);
-        setPosition({ x: 0, y: 0 });
+        resetPosition();
+      }
+    };
+
+    const handleMouseLeaveWindow = (e: MouseEvent) => {
+      if (!e.relatedTarget && !e.toElement) {
+        resetPosition();
       }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseout', handleMouseLeaveWindow);
+    
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseout', handleMouseLeaveWindow);
+    };
   }, [padding, strength]);
 
   return (
     <div
       ref={ref}
+      onMouseLeave={resetPosition}
       className={className}
       style={{
         transform: `translate3d(${position.x}px, ${position.y}px, 0)`,

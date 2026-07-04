@@ -61,7 +61,7 @@ export const AboutSection = () => {
           <div className="space-y-12">
             <div className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[800px] flex flex-col gap-6" style={{ fontSize: "clamp(1.1rem, 2vw, 1.3rem)" }}>
               <p>
-                <strong>SHANIX</strong>, formerly known as <strong>Sharonraj Vasave</strong>, is an Indian music producer, creative technologist, and digital creator. My journey began in 2016 on YouTube, creating content before diving deep into game development, ethical hacking, and music production.
+                <strong>SHANIX</strong>, his alter ego is <strong>Sharonraj Vasave</strong>, is an Indian music producer, creative technologist, and digital creator. My journey began in 2016 on YouTube, creating content before diving deep into game development, ethical hacking, and music production.
               </p>
               <p>
                 As the pioneer of Indian Phonk music, I am known for blending hardwave, trap, Brazilian funk, krushclub, and aesthetic rap. My breakthrough hit "Phonky India" surpassed 1 million views, establishing a unique identity in the global internet music scene.

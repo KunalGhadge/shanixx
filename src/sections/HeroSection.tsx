@@ -103,7 +103,10 @@ export const HeroSection = () => {
               I&apos;m SHANIX!
             </span>
             <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]" style={{ fontSize: "clamp(0.75rem, 1.4vw, 1.5rem)" }}>
-              Father of Indian Phonk music
+              SHANIX! | Internet Artist
+            </p>
+            <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug max-w-[160px] sm:max-w-[220px] md:max-w-[260px]" style={{ fontSize: "clamp(0.72rem, 1.2vw, 1.25rem)" }}>
+              Widely recognized as the Pioneer of Indian Phonk Music
             </p>
           </div>
         </FadeIn>

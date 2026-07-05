@@ -61,13 +61,13 @@ export const AboutSection = () => {
           <div className="space-y-12">
             <div className="text-[#D7E2EA] font-medium text-center leading-relaxed max-w-[800px] flex flex-col gap-6" style={{ fontSize: "clamp(1.1rem, 2vw, 1.3rem)" }}>
               <p>
-                <strong>SHANIX</strong>, his alter ego is <strong>Sharonraj Vasave</strong>, is an Indian music producer, creative technologist, and digital creator. My journey began in 2016 on YouTube, creating content before diving deep into game development, ethical hacking, and music production.
+                <strong>SHANIX!</strong> is the primary artist name and alter ego of <strong>Sharonraj Vasave</strong>, an Indian music producer, content creator, ethical hacker, and game developer. His journey began on YouTube in 2016, where he started with funny videos before moving into horror content, Minecraft gaming, and music production.
               </p>
               <p>
-                As the pioneer of Indian Phonk music, I am known for blending hardwave, trap, Brazilian funk, krushclub, and aesthetic rap. My breakthrough hit "Phonky India" surpassed 1 million views, establishing a unique identity in the global internet music scene.
+                Around 2018, he began making hip-hop, aesthetic rap, trap, and Phonk music while teaching himself ethical hacking, game hacking, app modding, and game development. His mix of Phonk with Indian vibes, aesthetic rap, and experimental sounds helped him stand out, earning recognition as one of the earliest and most influential Indian Phonk producers.
               </p>
               <p>
-                My artistic philosophy centers on pushing digital boundaries—fusing aggressive basslines with experimental audio-visual aesthetics. Today, the SHANIX brand is a multifaceted entity spanning across Spotify, SoundCloud, YouTube, and the wider creator economy.
+                After stepping away from music in 2021 to focus on personal life, hacking, and game development, he returned in 2023 with a fresh direction across Brazilian Funk, Hardwave, Krushclub, EDM, and other internet-driven genres. Today, SHANIX! continues to push creative boundaries across Spotify, SoundCloud, YouTube, and beyond.
               </p>
             </div>
           </div>
